@@ -3,7 +3,7 @@ name: Build Image
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  ENDPOINT: "rado0x54/sdocker-mods"
+  ENDPOINT: "rado0x54/docker-mods"
   BRANCH: "intel-media-driver"
 
 jobs:
