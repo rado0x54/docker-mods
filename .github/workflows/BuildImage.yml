@@ -3,8 +3,8 @@ name: Build Image
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  ENDPOINT: "user/endpoint"
-  BRANCH: "master"
+  ENDPOINT: "rado0x54/sdocker-mods"
+  BRANCH: "intel-media-driver"
 
 jobs:
   build:
@@ -38,7 +38,7 @@ jobs:
             exit 1
           fi
 
-      - name: Login to GitHub Container Registry
+      - name: Login to DOCKERUSERGitHub Container Registry
         if: ${{ github.ref == format('refs/heads/{0}', env.BRANCH) && env.CR_USER && env.CR_PAT }}
         run: |
           echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ secrets.CR_USER }} --password-stdin

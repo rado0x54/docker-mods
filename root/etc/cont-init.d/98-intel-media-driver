@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+if [ ! -f /usr/lib/dri/iHD_drv_video.so ] && \
+[ -f /sbin/apk ]; then
+  # Alpine
+  apk add --no-cache \
+    intel-media-driver
+fi
+
